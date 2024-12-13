@@ -96,7 +96,7 @@ function isValidData (data, id) {
     }
 }
 
-
+function checkButton () {
 inputsAll.forEach(function(input) {
             if (input.classList.contains('valid')){
                 btn.disabled = false;
@@ -105,36 +105,28 @@ inputsAll.forEach(function(input) {
             }
         })
 
-
-form.onSubmit =  function()  {
-    //look name Surname
-    isValidNameSurname (inputSurname, 'last-name-error');
-    isValidNameSurname (inputName, 'first-name-error');
-    //look email
-    isValidEmail (inputEmail, 'email-error');
-    //look password
-    isValidPassword (inputPassword, 'password-error');
-    isValidPasswordConfirm ('password-error', 'password-confirm-error');
-    // //look date
-    isValidData (inputData, 'date-error');
-    console.log('eto')
-
 }
+// form.onSubmit =  function()  {
+//     //look name Surname
+//     isValidNameSurname (inputSurname, 'last-name-error');
+//     isValidNameSurname (inputName, 'first-name-error');
+//     //look email
+//     isValidEmail (inputEmail, 'email-error');
+//     //look password
+//     isValidPassword (inputPassword, 'password-error');
+//     isValidPasswordConfirm ('password-error', 'password-confirm-error');
+//     // //look date
+//     isValidData (inputData, 'date-error');
+//     console.log('eto')
 
-function checkForm (form) {
-    isValidNameSurname (inputSurname, 'last-name-error');
-    isValidNameSurname (inputName, 'first-name-error');
-    //look email
-    isValidEmail (inputEmail, 'email-error');
-    //look password
-    isValidPassword (inputPassword, 'password-error');
-    isValidPasswordConfirm ('password-error', 'password-confirm-error');
-    // //look date
-    isValidData (inputData, 'date-error');
-}
+// }
+checkButton ()
+//EddListnerInput
+inputName.addEventListener('input', () => { isValidNameSurname (inputName, 'first-name-error')}) // Обязательно в обертку, иначе сразу сработает
+inputSurname.addEventListener('input', () => { isValidNameSurname (inputSurname, 'last-name-error')})
+inputEmail.addEventListener('input', () => { isValidEmail (inputEmail, 'email-error')})
+inputPassword.addEventListener('input', () => { isValidPassword (inputPassword, 'password-error')})
+inputPasswordConfirm.addEventListener('input', () => { isValidPasswordConfirm ('password-error', 'password-confirm-error')})
+inputData.addEventListener('input',  () => {isValidData (inputData, 'date-error')})
 
 
-inputName.addEventListener('input', isValidNameSurname (inputName, 'first-name-error'))
-
-
-// checkForm (form)
