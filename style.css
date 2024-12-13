@@ -2,7 +2,7 @@ body {
   font-family: Inter;
 }
 
-.label-sing-up {
+.span-sing-up, .label-sing-up {
   font-family: Plus Jakarta Sans;
 }
 
@@ -29,6 +29,14 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+}
+
+input.valid {
+  border-color: green;
+}
+
+input.invalid {
+  border-color: red;
 }
 
 .sing-up-form {
@@ -111,10 +119,16 @@ a {
   border: 1px solid #edf1f4;
 }
 .form-sing-up:focus {
-  outline-color: #808080;
+  outline: none;
 }
 
 .label-sing-up {
+  font-size: 12px;
+  font-weight: 500;
+  color: #808080;
+}
+
+.span-sing-up {
   font-size: 12px;
   font-weight: 500;
   color: #808080;

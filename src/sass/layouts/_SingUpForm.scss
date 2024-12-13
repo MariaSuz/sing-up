@@ -73,11 +73,16 @@
     padding: 14px 27px;
     border: 1px solid $color-label;
     &:focus{
-        outline-color: $color-text-clarifications;
+        outline: none;
     }
 }
 
 .label-sing-up{
+    @extend %font-second;
+    @include font(12px);
+    color: $color-text-clarifications;
+}
+.span-sing-up{
     @extend %font-second;
     @include font(12px);
     color: $color-text-clarifications;

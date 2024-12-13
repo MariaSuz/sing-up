@@ -38,32 +38,38 @@
                         <p class="content__header_account">Already have an account?<a href="#"><span class="sing-in-text">Login</span></a></p>
                     </div>
                     <div class="content__form_inside">
-                        <form class="form" action="singUp">
+                        <form class="form" action="">
                             <div class="form-group">
-                                <label for="name" class="label-sing-up">Name</label>
-                                <input type="text" name="name" id=" first-name" class="form-sing-up" placeholder="Enter your name">
+                                <label for="first-name" class="label-sing-up">Name</label>
+                                <input type="text" id="first-name" class="form-sing-up" placeholder="Enter your name">
+                                <span class="span-sing-up" id ='first-name-error'></span>
                             </div>
                             <div class="form-group">
-                                <label for="surname" class="label-sing-up">Surname</label>
-                                <input type="text" name="surname" id="last-name" class="form-sing-up" placeholder="Enter your surname">
+                                <label for="last-name" class="label-sing-up">Surname</label>
+                                <input type="text" id="last-name" class="form-sing-up" placeholder="Enter your surname">
+                                <span class="span-sing-up" id ='last-name-error'></span>
                             </div>
                             <div class="form-group">
                                 <label for="email" class="label-sing-up">Email</label>
-                                <input type="email" name="email" id="email" class="form-sing-up" placeholder="Enter your email">
+                                <input type="email" id="email" class="form-sing-up" placeholder="Enter your email">
+                                <span class="span-sing-up" id ='email-error'></span>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="label-sing-up">Set password</label>
-                                <input type="password" name="password" id="password" class="form-sing-up" placeholder="Set password">
+                                <input type="password" id="password" class="form-sing-up" placeholder="Set password">
+                                <span class="span-sing-up" id ='password-error'></span>
                             </div>
                             <div class="form-group">
-                                <label for="password2" class="label-sing-up">Confirm password</label>
-                                <input type="password" name="password2" id="password-confirm" class="form-sing-up" placeholder="Confirm you password">
+                                <label for="password-confirm" class="label-sing-up">Confirm password</label>
+                                <input type="password" id="password-confirm" class="form-sing-up" placeholder="Confirm you password">
+                                <span class="span-sing-up" id ='password-confirm-error'></span>
                             </div>
                             <div class="form-group">
-                                <label for="date" class="label-sing-up">Birth of date</label>
-                                <input type="date" name="date" id="birth-day" class="form-sing-up">
+                                <label for="birth-day" class="label-sing-up">Birth of date</label>
+                                <input type="date" id="birth-day" class="form-sing-up">
+                                <span class="span-sing-up" id ='date-error'></span>
                             </div>
-                            <button class="btn" id="form-button">Register</button>
+                            <button class="btn" id="form-button" disabled>Register</button>
                         </form>
                     </div>
                 </div>
@@ -73,5 +79,6 @@
             </div>
         </div>
     </section>
+    <script src="src/js/index.js"></script>
 </body>
 </html>
