@@ -168,6 +168,10 @@ input.invalid {
     background: linear-gradient(to bottom, #2567E8 0%, #1CE6DA 100%);
   }
 }
+.btn:disabled {
+  cursor: not-allowed;
+  background: black;
+}
 
 .footer-form {
   display: none;
