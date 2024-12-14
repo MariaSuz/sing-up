@@ -7,6 +7,7 @@
     width: 100%;
     @extend %font-prim;
     @include font(14px);
+    background: $background-color;
   }
 
   .wrapper{

@@ -11,3 +11,6 @@
     font-weight: $weight;
 }
 
+@mixin pc-hover {
+    @media (min-width: $content-width) { @content; }
+}

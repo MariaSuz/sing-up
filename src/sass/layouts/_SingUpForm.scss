@@ -8,9 +8,13 @@
 }
 
 .header__status-bar{
+    display: none;
+    @include media-mobile {
+    display: block;
     display: flex;
     justify-content: space-between;
     margin: 14px 14px;
+    }
 }
 
 .content__form{
@@ -100,17 +104,26 @@
     padding: 10px 24px;
     border-radius: 10px;
     color: $color-text-logo;
+    cursor: pointer;
     background: $color-button-primary;
     box-shadow: 0px 0px 0px $color-button-shadow;
-    &:hover{
-        @extend %transition;
+    @extend %transition;
+    @include pc-hover {
+        &:hover{
+            background: $background-color;
+        }
     }
 }
 
+
 .footer-form{
+    display: none;
+    @include media-mobile {
+    display: block;
     display: flex;
     justify-content: center;
     margin-top: 57px;
+    }
 }
 
 .footer-line{

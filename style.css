@@ -6,7 +6,7 @@ body {
   font-family: Plus Jakarta Sans;
 }
 
-.btn:hover {
+.btn {
   transition: all 0.3s ease;
 }
 
@@ -19,6 +19,7 @@ body {
   width: 100%;
   font-size: 14px;
   font-weight: 500;
+  background: linear-gradient(to bottom, #2567E8 0%, #1CE6DA 100%);
 }
 
 .wrapper {
@@ -49,9 +50,15 @@ input.invalid {
 }
 
 .header__status-bar {
-  display: flex;
-  justify-content: space-between;
-  margin: 14px 14px;
+  display: none;
+}
+@media (max-width: 375px) {
+  .header__status-bar {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    margin: 14px 14px;
+  }
 }
 
 .content__form {
@@ -146,13 +153,26 @@ input.invalid {
   padding: 10px 24px;
   border-radius: 10px;
   color: #FFFFFF;
+  cursor: pointer;
   background: linear-gradient(rgba(29, 97, 231, 0.9), rgb(29, 97, 231));
   box-shadow: 0px 0px 0px rgb(55, 93, 251);
 }
+@media (min-width: 1280px) {
+  .btn:hover {
+    background: linear-gradient(to bottom, #2567E8 0%, #1CE6DA 100%);
+  }
+}
+
 .footer-form {
-  display: flex;
-  justify-content: center;
-  margin-top: 57px;
+  display: none;
+}
+@media (max-width: 375px) {
+  .footer-form {
+    display: block;
+    display: flex;
+    justify-content: center;
+    margin-top: 57px;
+  }
 }
 
 .footer-line {
