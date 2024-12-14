@@ -18,13 +18,17 @@
 }
 
 .content__form{
+    margin-top: 36px;
     background: $color-text-logo;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     gap: 24px;
-    margin-top: 36px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 36px;
+    @include media-mobile {
+        margin-bottom: 0;
+    }
 }
 
 .content__form_inside{
@@ -118,6 +122,7 @@
 
 .footer-form{
     display: none;
+    margin-bottom: 36px;
     @include media-mobile {
     display: block;
     display: flex;
