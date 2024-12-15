@@ -96,14 +96,14 @@ function isValidData (data, id) {
     }
 }
 
+
 function checkButton () {
-    if (inputName.classList.contains('valid') && inputSurname.classList.contains('valid') 
-        && inputEmail.classList.contains('valid') && inputPassword.classList.contains('valid')
-        && inputPasswordConfirm.classList.contains('valid') && inputData.classList.contains('valid')){
-        btn.disabled = false;
-    } else {
-        btn.disabled = true;
-    }
+    let isValid = true;
+    inputsAll.forEach( input => {
+    if (!input.classList.contains('valid')) {
+        isValid = false;
+    }})
+    btn.disabled =  !isValid;
 }
 
 
