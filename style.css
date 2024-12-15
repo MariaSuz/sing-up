@@ -170,7 +170,7 @@ input.invalid {
 }
 .btn:disabled {
   cursor: not-allowed;
-  background: black;
+  background: #1A1C1E;
 }
 
 .footer-form {

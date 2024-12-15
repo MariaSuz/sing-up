@@ -96,14 +96,14 @@ function isValidData (data, id) {
     }
 }
 
-function checkButton (inputs) {
-inputs.forEach( (input) => {
-            if (input.classList.contains('valid')){
-                btn.disabled = false;
-            } else {
-                btn.disabled = true;
-            }
-        })
+function checkButton () {
+    if (inputName.classList.contains('valid') && inputSurname.classList.contains('valid') 
+        && inputEmail.classList.contains('valid') && inputPassword.classList.contains('valid')
+        && inputPasswordConfirm.classList.contains('valid') && inputData.classList.contains('valid')){
+        btn.disabled = false;
+    } else {
+        btn.disabled = true;
+    }
 }
 
 
@@ -116,5 +116,5 @@ inputPasswordConfirm.addEventListener('input', () => { isValidPasswordConfirm ('
 inputData.addEventListener('input',  () => {isValidData (inputData, 'date-error')})
 
 
-form.addEventListener('change', () => {checkButton(inputsAll )})
+form.addEventListener('input', () => {checkButton()})
 
