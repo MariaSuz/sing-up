@@ -51,13 +51,13 @@
 7. Каждый элемент формы должен иметь атрибут id, включая сообщения,
 используемые для валидации.
 8. Придерживаемся следующих наименований для инпутов:
-● id="first-nam
-● id="last-name"
-● id="email"
-● id="password"
-● id="password-confir
-● id="birth-day"
-● id="form-button"
+- id="first-name"
+- id="last-name"
+- id="email"
+- id="password"
+- id="password-confirm"
+- id="birth-day"
+- id="form-button"
 9. По результатам валидации, теги form и все элементы формы ( теги input \ textarea \ etc )
 дополняются классом "invalid" в случае невалидности формы \ элемента формы и "valid" в
 случае валидности.
