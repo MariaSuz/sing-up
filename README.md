@@ -1,5 +1,4 @@
 # sing-up form
-Тестовое задание для 23devs.
 
 ![image](singup.jpg)
 
