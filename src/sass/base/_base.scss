@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    width: 100%;
+    @extend %font-prim;
+    @include font(14px);
+    background: $background-color;
+  }
+
+  .wrapper{
+    max-width: $content-width;
+    margin: 0 16px;
+  }
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  input.valid {
+    border-color: green;
+  }
+  
+  input.invalid {
+    border-color: red;
+  }
